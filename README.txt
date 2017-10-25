@@ -24,3 +24,7 @@ October 2017
 	                   prompt to load the program that runs the assembler and compilers.
         (10/25/17 @ 15:57) Compatibility programs between C++, Python, and NASM have been designed and are in the process
                            Of being programmed. (CURRENT LOAD: Python)
+	(10/25/17 @ 17:29) Compatibility Finder application created for better user-friendly installation structure of
+			   Crayon and the Crayon source. (replacement for load.py)
+	(10/25/17 @ 19:51) Future development of basic variables and console print commands of ComPy v1.0 syntax to be
+			   utilized by text file ComPy-Syntax-Design.txt (refer for help)
