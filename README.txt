@@ -21,5 +21,6 @@ CHANGELOG:
 
 October 2017
 	(10/25/17 @ 08:43) Added load.py for future use of Crayon OS versions 1.x. It can be loaded in the Windows command
-	                   prompt to load the program that runs the assembler and compilers.
-										 
+	                   prompt to load the program that runs the assembler and compilers.
+        (10/25/17 @ 15:57) Compatibility programs between C++, Python, and NASM have been designed and are in the process
+                           Of being programmed. (CURRENT LOAD: Python)
