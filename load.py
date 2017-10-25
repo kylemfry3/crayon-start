@@ -1,4 +1,6 @@
 #Crayon Loader v1.0 designed and compiled by Kyle Fry
+#Replace the [User Here] or [Path Here] inputs with the file directory for Crayon OS Folder
+
 import os
 import time
 
