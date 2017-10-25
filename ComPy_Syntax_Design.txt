@@ -1,0 +1,43 @@
+ComPy and Crayon OS were designed by Kyle Fry under the assembly language compiled and run by C++ and
+Python, thus why the language is called ComPy (Compiled Python). Compiled Python compresses the easy syntax
+of Python and the speed of compilation of the C family languages to help make speedy processes. ComPy will be
+classified as a compiled object oriented language, in which all programs and its arguements must be declared 
+in a function to allow use and proper execution.
+
+========== NOTICE ==========
+ComPy is currently under development and its
+structures are still not mature. Errors should be
+expected and allowed for bug fixes and numerous
+attempts at executing a program.
+============================
+
+ComPy Syntax version 1.o compiled, structured, and designed by Kyle Fry (2017)
+
+Like the commands print() and cout, ComPy has a dedicated command for printing to console, show(). But just like
+C++, or any C family language for that matter, must be placed inside a function, which ComPy calls Main().
+In order for a function to be called and loaded (load()), there must be an action for which the arguements 
+will be loaded to. For printing to a console window, the first line must be in the use() syntax. The 
+registries of ComPy will be used for command prompt as "use(os.cmd)" which will come from the Python derivitive
+import(os) and C:\Users\[More Here]. Semicolons must be used in order to finish a statement in ONE LINE. 
+
+---->NOTE: ComPy functions are cAsE SeNsItIvE and must include Name() and {arguements}. ComPy will automatically
+---->skip to the next line when doing two show() commands in a row. This can be overrided by inputing
+---->"enable(comp.newl) = false;". Notes can be ignored by the compiler if a # is place at the beginning and end
+---->of the comment.
+
+Example:
+  #State what program to apply the arguements to#
+  use(os.cmd);
+  
+  #Declare the function Main() and give command to print#
+  func.Main() {
+    show("Hello World!");
+   }
+   
+   #Tell compiler to execute script after compilation is completed#
+   load()
+   
+   #This should print out: Hello World!#
+   
+  
+  
