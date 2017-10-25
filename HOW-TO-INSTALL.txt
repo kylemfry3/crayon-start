@@ -1,0 +1,55 @@
+===== CRAYON OS v1.x =====
+===== Kyle Fry, 2017 =====
+
+NOTICE:
+
+	In order to process and continue to start the CrayonOS installation process, you must have IDLE Python 3.6
+	or the Python 3.6 Interpreter/compiler installed on your local machine. Crayon OS is in development; please
+	expect bugs and do not rely fully on it because it is not mature yet. **THIS SHOULD ONLY BE USED FOR TESTING
+	AND EXPERIMENTATION PURPOSES**
+	
+INTRODUCTION TO CRAYON OS:
+	
+	Thank you for deciding to participate in the creation of a new developing operating system, Crayon OS! Crayon
+	OS is designed to allow any user; new or experienced in coding, file organization, and system usage alike to 
+	optimize the system for the sole purpose of allowing them to better use thier computer to their everyday needs.
+	Templates will be designed and developed as soon as the first stable version of Crayon OS is released. Until then,
+	do not hesistate to add any patches or report any bugs to me, Kyle Fry, if there is any not mentioned or being
+	worked on.
+	
+HOW TO INSTALL CRAYON OS SOURCE:
+	
+	The Crayon OS Source should have been in the same file folder that you are reading this in. If not, please re-download
+	this folder from GitHub or contact me directly at kylemfry3@gmail.com if there are any conflicts with this.
+	
+	1. Extract and run the "compat-finder.py" file by manually moving to it via command prompt (A more convinient process
+	will be worked on later)
+	
+	2. After running the file, you will reach an input field that will ask for you to locate where your "start-crayon.html"
+	file is located. Please find where the folder you extracted ended up and move it to the directory "C:\". This should be
+	the folder where you have Program Files, Users, AppData, etc. Now, in the input box, type "C:\start-crayon.html". The 
+	program will find the file, which may take up to 5 seconds, then it will open a web browser window.
+	
+	3. In this web browser window, you will see that there are a few options: Create, Install, and Help. Please click on
+	Install.
+	
+	4. After clicking install, you will be directed to a Google Drive address, where you will download "CrayonOS-1.x.x"
+	
+	5. After installing, extract and navigate to the .ISO file. Keep this file explorer tab open.
+	
+	6. If you have not installed already, please install either VMWare or VirtualBox on your computer (I will be using
+	VMWare)
+	
+	7. Run VMWare and "Add a virtual machine"
+	
+	8. Set the OS Type to "Other" on both boxes
+	
+	9. Set the memory to what seems reasonable to you.
+	
+	10. Save the machine as whatever you'd like, make sure it's something you can remember.
+	
+	11. Click "Run this machine" and enjoy!
+
+
+	
+	
