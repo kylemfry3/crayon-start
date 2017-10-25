@@ -12,7 +12,7 @@ attempts at executing a program.
 ============================
 
 ComPy Syntax version 1.o compiled, structured, and designed by Kyle Fry (2017)
-
+---------------------------------------------------------------------------------------------------------------------------------
 Like the commands print() and cout, ComPy has a dedicated command for printing to console, show(). But just like
 C++, or any C family language for that matter, must be placed inside a function, which ComPy calls Main().
 In order for a function to be called and loaded (load()), there must be an action for which the arguements 
@@ -24,6 +24,7 @@ import(os) and C:\Users\[More Here]. Semicolons must be used in order to finish 
 ---->skip to the next line when doing two show() commands in a row. This can be overrided by inputing
 ---->"enable(comp.newl) = false;". Notes can be ignored by the compiler if a # is place at the beginning and end
 ---->of the comment.
+
 
 Example:
   #State what program to apply the arguements to#
@@ -39,5 +40,53 @@ Example:
    
    #This should print out: Hello World!#
    
+   ------------------------------------------------------------------------------------------------------------------------------
+  Calling variables is a large part of coding structure, as is essential for keeping tidiness in any coding script.
+  Using ComPy, we can call variables by their global or local status by whatever class they are in. If we are declaring
+  a GLOBAL variable, we can do so by typing in "variableName = [string, float, double, int, long] (...);" or if it is a variable
+  that is changed throughout the script: "variableName = dynamic;" in the top where arguementative programs are stated.
   
   
+  Example:
+    #State what program to apply the arguements to#
+    use(os.cmd);
+    #Declare any GLOBAL variables#
+    userName = string("Kyle");
+    
+    #Declare the Main() function and use variables to print#
+    func.Main() {
+      show(userName);
+    }
+    
+    #Tell compiler to execute once loaded#
+    load()
+    
+    #This should print out: Kyle#
+    
+   When calling LOCAL functions, the syntax is the same, but the function/class it is in can have access to it. Class structure will
+   be discussed later. Furthermore, only commands with the LOCAL variable must be stated inside the same class.
+   
+   
+   Example:
+      #State what program to apply the arguements to#
+      use(os.cmd);
+      #State any GLOBAL variables and their types#
+      userName = string("Kyle");
+      
+      #State the function Main() and its arguements#
+      func.Main() {
+        func.someNameIDontCareAbout() {
+          passWord = string("My password is Popcorn");
+          show(passWord);
+        }
+        show("My username is: ", userName)
+        #After function/class has been stated, load its arguements into the Main() function#
+        load(someNameIDontCareAbout);
+       }
+       
+       #Tell compiler to execute once loaded#
+       load()
+       
+       #This should print out: My username is Kyle#
+       #                       My password is Popcorn#
+       ---------------------------------------------------------------------------------------------------------------------------
