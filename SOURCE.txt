@@ -1,0 +1,224 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+//using Sys = Cosmos.System;
+
+namespace SOURCE
+{
+    public class Kernel : Sys.Kernel
+    {
+        protected override void BeforeRun()
+        {
+            //Any arguements on startup
+            Console.WriteLine("===========================");
+            Console.WriteLine("CRAYONOS SOURCE BUILD v1.12");
+            Console.WriteLine("===========================");
+            
+            Kernel k = new Kernel();
+            k.Run();
+        }
+
+        string StartingDecision;
+        protected override void Run()
+        {
+            GetInfo g = new GetInfo();
+            CommandPrompt c = new CommandPrompt();
+
+            //Ask user what to do
+            Console.Write("\n(BIOS) Choose which operation to carry out: [LOAD] to continue to CrayonOS or \n [SKIP] to go straight to command prompt: ");
+            StartingDecision = Console.ReadLine();
+
+            if (StartingDecision == "LOAD") 
+            {
+                //Sign the user in and continue from there
+                g.SignIn();
+            }
+            if (StartingDecision == "load")
+            {
+                g.SignIn();
+            }
+            if (StartingDecision == "SKIP")
+            {
+                c.OnStart();
+            }
+            if (StartingDecision == "skip")
+            {
+                c.OnStart();
+            }
+            else
+            {
+                //Skip to command prompt
+                Console.WriteLine("\nERROR! Choice not valid; Skipping to command prompt.");
+                c.OnStart();
+                
+            }
+
+        }
+
+
+
+    }
+		//LOGIN AND INITIALIZATION
+    
+    
+    //Get information and do initial events
+    public class GetInfo
+    {
+        string Username;
+        string Password;
+
+        public void SignIn()
+
+        
+    	
+    	{
+            GetInfo g = new GetInfo();
+            CommandPrompt c = new CommandPrompt();
+            Console.Write("\nCrayonOS has successfully loaded.\nPlease sign in with your username: ");
+    		Username = Console.ReadLine();
+    		Console.WriteLine("");
+    		Console.Write("Please enter your password: ");
+    		Password = Console.ReadLine();
+    		
+    		if (Username == "Kyle" && Password == "Popcorn") {
+    			Console.WriteLine("\nWelcome, Kyle! Loading your console...");
+    			Console.WriteLine("\n.................................................................");
+    			c.OnStart();
+    		}
+    		else
+    		{
+    			Console.WriteLine("ERROR! password and username do not match, or you have not registered for an account on this computer yet.");
+                g.SignIn();
+    		}
+    	}
+    }
+    
+    //Initialize the command prompt program
+    public class CommandPrompt
+{
+    string UserInput;
+    string Write;
+        
+    public void OnStart()
+    {
+            GetInfo g = new GetInfo();
+            CommandPrompt c = new CommandPrompt();
+            Console.WriteLine("Type 'LOGOUT' at anytime to log out of your account.");
+        Console.Write("\n(CMD) Input a command, type 'help' for availiable programs: ");
+            Console.WriteLine("\n.............................................");
+        UserInput = Console.ReadLine();
+        if (UserInput == "write")
+            {
+                Console.WriteLine("\nType 'back' at any time to return to the menu.");
+                while (UserInput == "write") {
+                    
+                Console.Write("\n(WRITE) Please enter text and it will be repeated to you: ");
+                string Write = Console.ReadLine();
+                    if (Write == "back")
+                    {
+                        c.OnStart();
+                        break;
+                    }
+                   
+                Console.WriteLine("\n(WRITE) You entered: ");
+                Console.Write(Write);
+                    Console.WriteLine("\n");
+                    
+                }
+            }
+        if (UserInput == "help")
+            {
+                Console.WriteLine("-----------------------------");
+                Console.WriteLine("CRAYONOS COMMAND PROMPT V0.25");
+                Console.WriteLine("-----------------------------");
+                Console.WriteLine("\nLIST OF VALID COMMANDS as of 11/9/17: \n write-Input and return values");
+                Console.Write("\nType anything to return to the command prompt. \n............................... ");
+                Help = Console.ReadLine();
+                c.OnStart();
+            }
+        if (UserInput == "LOGOUT")
+            {
+                g.SignIn();
+            }
+        else
+            {
+                Console.WriteLine("\nERROR! Command not recognized.");
+                c.OnStart();
+            }
+    }
+}
+
+		//COMMAND LIBRARY
+		
+		//File Manager
+		public class FileManager
+		{
+			string FilePath;
+			
+			//Access a text file
+			public void AccessTxtFile()
+			{
+				String line;
+				try 
+				{
+					//Pass the file path and file name to the StreamReader constructor
+					StreamReader sr = new StreamReader(FilePath);
+
+					//Read the first line of text
+					line = sr.ReadLine();
+
+					//Continue to read until you reach end of file
+					while (line != null) 
+					{
+						//write the lie to console window
+						Console.WriteLine(line);
+						//Read the next line
+						line = sr.ReadLine();
+					}
+
+					//close the file
+					sr.Close();
+					Console.ReadLine();
+				}
+				catch(Exception e)
+				{
+					Console.WriteLine("Error Message: " + e.Message);
+				}
+  			finally 
+				{
+					Console.WriteLine("\n*Execution complete*");
+				}
+			}
+			
+			//Command prompt view
+			public void CMDFile
+			{
+				
+				FileManager file = new FileManager();
+				CommandPrompt cmd = new CommandPrompt();
+				
+				Console.WriteLine("\n...................................");
+				Console.WriteLine("\nType 'back' at anytime to go back to console.");
+				Console.WriteLine("\nFILE MANAGER v0.1 (Last updated 11/11/17 @ 10:22");
+				while true do
+				{
+					Console.Write("\n(FILE)Please enter in file directory: ");
+					FilePath = Console.ReadLine();
+					file.AccessTxtFile();
+					Console.WriteLine("");
+					
+					if (FilePath = "back") (FilePath = "BACK")
+					{
+						cmd.OnStart();
+						break;
+					}
+				}
+				
+			}
+			
+		}
+}
+
+    
+    
